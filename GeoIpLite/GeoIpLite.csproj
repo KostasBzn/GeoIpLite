@@ -49,21 +49,816 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FlagResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlagResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="GeoFlagLoader.cs" />
     <Compile Include="GeoIpMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="dbip-country-lite-2025-11.mmdb" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlagResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FlagResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\AZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\BZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CAF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CNA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\COC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CSA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\CZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\DE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\DJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\DK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\DM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\DO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\DZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\EC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\EE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\EG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ES.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\EU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\FI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\FJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\FK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\FM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\FO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\FR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GB-ENG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GB-NIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GB-SCT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GB-WLS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GB-ZET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\GY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\HK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\HM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\HN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\HR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\HT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\HU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\IT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\JE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\JM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\JO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\JP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\KZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LGBT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\LY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ME.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ML.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MQ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\MZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\NZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\OM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\PY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\QA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\RE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\RO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\RS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\RU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\RW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\SZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TJ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\TZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\UA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\UG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\UM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\US.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\US-CA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\UY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\UZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\VU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\WS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\WW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\XK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\XY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\YE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\YT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ZA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ZM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flags\ZW.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.6.0.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.0.0\build\Fody.targets')" />
