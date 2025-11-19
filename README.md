@@ -1,4 +1,4 @@
-# cGeoIP - Simple GeoIP Library for .NET
+# GeoIpLite - Simple GeoIP Library for .NET
 
 Lightweight .NET library that resolves IP addresses to countries and displays corresponding flags.
 
