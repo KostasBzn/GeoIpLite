@@ -10,6 +10,10 @@ Lightweight .NET library that resolves IP addresses to countries and displays co
 - Single dll file, compiled with Costura.Fody
 - Built with .Net 4.8
 
+## Requirements
+
+- .NET Framework 4.8 installed
+
 ## Usage
 
 ```csharp
