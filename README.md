@@ -62,3 +62,8 @@ Database Source: https://db-ip.com/db/download/ip-to-country-lite
 
 Note: GeoLite2 Country.mmdb database works too, just a little larger on size
 
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](/LICENSE)
+
+This project is licensed under the MIT License - see the [LICENSE](/LICENSE) file for details
