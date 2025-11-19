@@ -7,14 +7,15 @@ namespace GeoIpLite
 {
     internal class GeoFlagLoader
     {
-        public ImageList flgImgList {  get; set; }
+        public ImageList FlgImgList {  get; set; }
 
         public GeoFlagLoader()
         {
-            flgImgList = new ImageList();
+            FlgImgList = new ImageList();
             // original flag size 29x23px with 4px transparent margin each side
             // the png size can be customised for the project needs - feel free
-            flgImgList.ImageSize = new Size(32, 24); 
+            FlgImgList.ImageSize = new Size(32, 24);
+            FlgImgList.TransparentColor = Color.Transparent;
             LoadAllFlags();
         }
 
@@ -27,7 +28,7 @@ namespace GeoIpLite
                 var countryCode = entry.Key.ToString();
 
                 if (resources.GetObject(countryCode) is Image flag)
-                    flgImgList.Images.Add(countryCode, flag);
+                    FlgImgList.Images.Add(countryCode, flag);
             }
         }
     }

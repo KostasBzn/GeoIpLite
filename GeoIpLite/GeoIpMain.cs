@@ -12,7 +12,7 @@ namespace GeoIpLite
         public GeoIpMain()
         {
             var getFlags = new GeoFlagLoader(); // we intialise the flag list
-            flagImageList = getFlags.flgImgList;
+            flagImageList = getFlags.FlgImgList;
 
             // Database resource: https://db-ip.com/db/download/ip-to-country-lite *thanks guys*
             var assembly = Assembly.GetExecutingAssembly();
