@@ -65,7 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="dbip-country-lite-2025-11.mmdb" />
+    <EmbeddedResource Include="dbip-country-lite-2025-11.mmdb" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
