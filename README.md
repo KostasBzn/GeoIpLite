@@ -25,9 +25,26 @@ string ipInfo = geo.GetIpInf("192.168.1.1");
 string ipInfo = geo.GetIpInf("127.0.0.1");
 // Returns: "127.0.0.1:LocalHost:XY"
 
-// Use with ListView
+string[] infoList = ipInfo.Split(':'); 
+var ipa = infoList[0];
+var country = infoList[1];
+var countryCode = infoList[2];
+
+// How to get the flag Image
+
+// For UI elements example
+pictureBox1.Image = geo.flagImageList.Images[countryCode];;
+
+// For ListView example
+// Assign the ImageList to the ListView
 listView1.SmallImageList = geo.flagImageList;
 listView1.LargeImageList = geo.flagImageList;
+
+// Add an item with the country name
+var item = new ListViewItem(country);
+listView1.Items.Add(item);
+
+item.ImageKey = countryCode; // ListView will show the image and the country name next
 
 ```
 
@@ -37,5 +54,5 @@ Includes DB-IP Lite country database (dbip-country-lite-2025-11.mmdb). (can be u
 
 Database Source: https://db-ip.com/db/download/ip-to-country-lite
 
-Note: GeoLite2 Country .mmdb database works too, just a little larger on size
+Note: GeoLite2 Country.mmdb database works too, just a little larger on size
 
