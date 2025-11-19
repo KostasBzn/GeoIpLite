@@ -34,7 +34,8 @@ listView1.LargeImageList = geo.flagImageList;
 ## Database
 
 Includes DB-IP Lite country database (dbip-country-lite-2025-11.mmdb). (can be updated)
-Source: https://db-ip.com/db/download/ip-to-country-lite
+
+Database Source: https://db-ip.com/db/download/ip-to-country-lite
 
 Note: GeoLite2 Country .mmdb database works too, just a little larger on size
 
