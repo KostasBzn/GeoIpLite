@@ -1,6 +1,6 @@
 # GeoIpLite - Simple GeoIP Library for .NET
 
-Lightweight .NET library that resolves IP addresses to countries and displays corresponding flags.
+Lightweight .NET library that resolves IP addresses to countries and displays corresponding flags. Can be easily customised and updated with the latest **mmdb** databases and your own flag collection.
 
 ## Features
 
