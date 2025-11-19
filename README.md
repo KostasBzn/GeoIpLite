@@ -13,6 +13,8 @@ Lightweight .NET library that resolves IP addresses to countries and displays co
 ## Usage
 
 ```csharp
+// Add the compiled dll file as reference in the project.
+
 using GeoIpLite;
 var geo = new GeoIpMain();
 
