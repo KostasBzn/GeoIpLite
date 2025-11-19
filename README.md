@@ -1,46 +1,37 @@
-\# cGeoIP - Simple GeoIP Library for .NET
+# cGeoIP - Simple GeoIP Library for .NET
 
-A lightweight .NET library that resolves IP addresses to countries and displays corresponding flags.
+Lightweight .NET library that resolves IP addresses to countries and displays corresponding flags.
 
-\## Features
+## Features
 
-\- \*\*IP to Country Lookup\*\* - Convert any IP to country name and code
+- Convert any IP to country name and code
+- Includes 262 country flags in **png** format (can be updated)
+- Detects localhost and local network IPs
+- Single dll file, compiled with Costura.Fody
+- Built with .Net 4.8
 
-\- \*\*Flag Images\*\* - Includes 248 country flags with clean padding
-
-\- \*\*Local Network Detection\*\* - Automatically detects localhost and private IPs
-
-\- \*\*Single DLL\*\* - No external dependencies, thanks to Costura.Fody
-
-\- \*\*.NET 4.8\*\* - Compatible with older projects
-
-
-
-\## Usage
-
-
+## Usage
 
 ```csharp
+using GeoIpLite;
+var geo = new GeoIpMain();
 
-use cGeoIP
-var geo = new cGeoMain();
-
-string ipInfo = geo.GetIpInf("8.8.8.8");
-// Returns: "8.8.8.8:United States:US"
-
-
+string ipInfo = geo.GetIpInf("123.456.78.910");
+// Returns: "123.456.78.910:United States:US"
 
 string ipInfo = geo.GetIpInf("192.168.1.1");
 // Returns: "192.168.1.1:LocalNetwork:XY"
 
+string ipInfo = geo.GetIpInf("127.0.0.1");
+// Returns: "127.0.0.1:LocalHost:XY"
+
 // Use with ListView
-listView1.SmallImageList = geo.cImageList;
-listView1.LargeImageList = geo.cImageList;
+listView1.SmallImageList = geo.flagImageList;
+listView1.LargeImageList = geo.flagImageList;
 
 ```
 
-
-\## Database
+## Database
 
 Includes DB-IP Lite country database (dbip-country-lite-2025-11.mmdb). (can be updated)
 Source: https://db-ip.com/db/download/ip-to-country-lite
