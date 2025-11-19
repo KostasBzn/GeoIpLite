@@ -22,29 +22,33 @@ namespace GeoIpLite
             }
         }
 
-        public string GetIpInf(string ip)
+        public string GetIpInf(string ipa)
         {
             try
             {
-                if (IPAddress.TryParse(ip, out var iPAddress)) // we check if the ip is 127.0.0.1 (localhost)
+                if (IPAddress.TryParse(ipa, out var ipAddress)) // we check if the ip is 127.0.0.1 (localhost)
                 {
-                    if(IPAddress.IsLoopback(iPAddress))
+                    if(IPAddress.IsLoopback(ipAddress))
                     {
-                        return $"{ip}:LocalHost:XY";
+                        return $"{ipa}:LocalHost:XY"; // XY is a generic grey flag I created if there is no flag available.
                     }
 
-                    var ipBytes = iPAddress.GetAddressBytes(); // we check for local network ip
+                    var ipBytes = ipAddress.GetAddressBytes(); // we check for local network ip
                     if (ipBytes[0] == 10 || (ipBytes[0] == 172 && ipBytes[1] >= 16 && ipBytes[1] <= 31) || (ipBytes[0] == 192 && ipBytes[1] == 168))
-                            {
-                        return $"{ip}:LocalNetwork:XY";
+                    {
+                        return $"{ipa}:LocalNetwork:XY";
                     }
-
                 }
-                return $"{ip}:countryName:countryCode";
+
+                var country = _databaseReader.Country(ipa);
+                var countryName = country.Country.Name ?? "Unknown";
+                var countryCode = (country.Country.IsoCode ?? "XY").ToUpper();
+                return $"{ipa}:{countryName}:{countryCode}";
+
             }
             catch
             {
-                return $"{ip}:N/A:XY";
+                return $"{ipa}:N/A:XY";
             }
         }
     }
