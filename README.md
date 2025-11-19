@@ -50,7 +50,7 @@ listView1.LargeImageList = geo.flagImageList;
 var item = new ListViewItem(country);
 listView1.Items.Add(item);
 
-item.ImageKey = countryCode; // ListView will show the image and the country name next
+item.ImageKey = countryCode; // ListView will show the flag and the country name next
 
 ```
 
