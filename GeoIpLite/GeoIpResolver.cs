@@ -16,9 +16,10 @@ namespace GeoIpLite
             // Initialize image list
             FlagImageList = GeoFlagLoader.LoadFlags();
 
+            // Database resource: https://db-ip.com/db/download/ip-to-country-lite *thanks guys*
             using (var ms = new MemoryStream(Properties.Resources.dbip_country_lite_2025_11))
             {
-                _databaseReader = new DatabaseReader(ms);  
+                _databaseReader = new DatabaseReader(ms);  // we load the database
             }
         }
 
@@ -28,10 +29,10 @@ namespace GeoIpLite
             {
                 if (IPAddress.TryParse(IPA, out var ipAddress))
                 {
-                    if (IPAddress.IsLoopback(ipAddress))
-                        return $"{IPA}:LocalHost:XY";
+                    if (IPAddress.IsLoopback(ipAddress)) // we check if the ip is 127.0.0.1 (localhost)
+                        return $"{IPA}:LocalHost:XY"; // XY is a generic grey flag I created if there is no flag available.
 
-                    var bytes = ipAddress.GetAddressBytes();
+                    var bytes = ipAddress.GetAddressBytes(); // we check for local network ip
                     if (bytes[0] == 10 ||
                         bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31 ||
                         bytes[0] == 192 && bytes[1] == 168)

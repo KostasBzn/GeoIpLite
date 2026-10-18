@@ -9,10 +9,11 @@ namespace GeoIpLite
     {
         public static ImageList LoadFlags()
         {
+            // original flag size 29x23px with 4px transparent margin each side
             var list = new ImageList
             {
                 ColorDepth = ColorDepth.Depth32Bit,
-                ImageSize = new Size(32, 24),
+                ImageSize = new Size(32, 24), // the png size can be customised for the project needs - feel free
                 TransparentColor = Color.Transparent
             };
 
