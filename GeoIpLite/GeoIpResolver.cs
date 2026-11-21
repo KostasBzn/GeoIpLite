@@ -23,31 +23,27 @@ namespace GeoIpLite
             }
         }
 
-        public string GetIpInf(string IPA)
+        public (string Country, string CountryCode) GetIpInf(string IPA)
         {
             try
             {
-                if (IPAddress.TryParse(IPA, out var ipAddress))
-                {
-                    if (IPAddress.IsLoopback(ipAddress)) // we check if the ip is 127.0.0.1 (localhost)
-                        return $"{IPA}:LocalHost:XY"; // XY is a generic grey flag I created if there is no flag available.
+                // check if the ip is valud in first place
+                if (!IPAddress.TryParse(IPA, out var ipAddress))
+                    return ("N/A", "XY"); // XY us a grey flag I made for unknown or N/A stuff
 
-                    var bytes = ipAddress.GetAddressBytes(); // we check for local network ip
-                    if (bytes[0] == 10 ||
-                        bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31 ||
-                        bytes[0] == 192 && bytes[1] == 168)
-                        return $"{IPA}:LocalNetwork:XY";
-                }
+                // needs refactor to handle ipv6
+
+               
 
                 var country = _databaseReader.Country(IPA);
                 var countryName = country.Country.Name ?? "Unknown";
                 var countryCode = (country.Country.IsoCode ?? "XY").ToUpper();
 
-                return $"{IPA}:{countryName}:{countryCode}";
+                return (countryName, countryCode);
             }
             catch
             {
-                return $"{IPA}:N/A:XY";
+                return ("N/A", "XY");
             }
         }
 
