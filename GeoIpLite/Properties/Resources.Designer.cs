@@ -19,7 +19,7 @@ namespace GeoIpLite.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -653,9 +653,9 @@ namespace GeoIpLite.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] dbip_country_lite_2025_11 {
+        internal static byte[] dbip_country_lite_2026_11 {
             get {
-                object obj = ResourceManager.GetObject("dbip_country_lite_2025_11", resourceCulture);
+                object obj = ResourceManager.GetObject("dbip_country_lite_2026_11", resourceCulture);
                 return ((byte[])(obj));
             }
         }
