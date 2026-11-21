@@ -1,6 +1,6 @@
 # GeoIpLite - Simple GeoIP Library for .NET
 
-I created this project because I couldn't find something similar to resolve a simple IPv4 into flag and country. I know it does not support IPv6 and it might has some bugs for extreme cases but it works for my needs. It can be easily customised and updated with the latest **mmdb** databases and your own flag collection.
+I created this project because I couldn't find something similar to resolve a simple IPv4 into flag and country. I updated my old version and now handles more cases and supports IPv6. It can be easily customised and updated with the latest **mmdb** databases and your own flag collection, or target different Framework.
 
 ## Features
 
@@ -13,7 +13,7 @@ I created this project because I couldn't find something similar to resolve a si
 ## Requirements
 
 - Windows (uses WinForms and System.Drawing)
-- .NET Framework 4.8 installed
+- .NET Framework 4.8 installed (or the Framework you are going to target)
 
 ## Usage
 
@@ -21,21 +21,17 @@ I created this project because I couldn't find something similar to resolve a si
 // Compile the project and add the compiled GeoIpLite.dll file as reference in the project.
 
 using GeoIpLite;
+
 var geo = new GeoIpResolver();
 
-string ipInfo = geo.GetIpInf("8.8.8.8");
-// Returns: "8.8.8.8:United States:US"
+var (country, countryCode) = geo.GetIpInf("8.8.8.8");
+// Result: country = "United States", countryCode = "US"
 
-string ipInfo2 = geo.GetIpInf("192.168.1.1");
-// Returns: "192.168.1.1:LocalNetwork:XY"
+var (country, countryCode) = geo.GetIpInf("192.168.1.1");
+// Result: country = "LocalNetwork", countryCode = "XY"
 
-string ipInfo3 = geo.GetIpInf("127.0.0.1");
-// Returns: "127.0.0.1:LocalHost:XY"
-
-string[] infoList = ipInfo.Split(':');
-var ipa = infoList[0];
-var country = infoList[1];
-var countryCode = infoList[2];
+var (country, countryCode) = geo.GetIpInf("127.0.0.1");
+// Result: country = "LocalHost", countryCode = "XY"
 
 // How to get the flag Image
 
@@ -44,14 +40,13 @@ pictureBox1.Image = geo.FlagImageList.Images[countryCode];
 
 // For ListView example
 // Assign the ImageList to the ListView
-listView1.SmallImageList = geo.FlagImageList;
-listView1.LargeImageList = geo.FlagImageList;
+listView1.SmallImageList = geo.FlagImageList; // small 
+listView1.LargeImageList = geo.FlagImageList; // or large 
 
 // Add an item with the country name
 var item = new ListViewItem(country);
-listView1.Items.Add(item);
-
 item.ImageKey = countryCode; // ListView will show the flag and the country name next
+listView1.Items.Add(item);
 
 // GeoIpResolver is IDisposable, dispose it when you are done. For example when the form closes
 // Dont dispose it before that because the flags will disappear because the ImageList gets disposed too
@@ -60,7 +55,7 @@ geo.Dispose();
 
 ## Database
 
-Includes DB-IP Lite country database (dbip-country-lite-2025-11.mmdb), embedded in the project resources. It can be updated with the latest
+Includes DB-IP Lite country database (dbip-country-lite-2026-11.mmdb), embedded in the project resources. It can be updated with the latest one. DB-IP updates it monthly.
 
 To update it, replace the mmdb file in the project resources.
 
