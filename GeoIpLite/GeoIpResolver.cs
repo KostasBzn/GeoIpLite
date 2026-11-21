@@ -81,6 +81,7 @@ namespace GeoIpLite
             return isLocalNetwork;
         }
 
+        // if you targer modern .net you dont need that. you can call iPAddress.IsIPv6UniqueLocal
         private static bool IsIPv6UniqueLocal(IPAddress iPAddress)
         {
             byte[] bytes = iPAddress.GetAddressBytes();
