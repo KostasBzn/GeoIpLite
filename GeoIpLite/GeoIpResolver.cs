@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Windows.Forms;
+using System.Net.Sockets;
 
 namespace GeoIpLite
 {
@@ -40,7 +41,8 @@ namespace GeoIpLite
                     return ("LocalHost", "XY");
 
                 // is private network
-                // i will do it later
+                if (IsLocalNework(ipAddress))
+                    return ("LocalNetwork", "XY");
 
                 // time to look up the database
                 if(_databaseReader.TryCountry(ipAddress, out var country) && country != null)
@@ -56,6 +58,34 @@ namespace GeoIpLite
             {
                 return ("N/A", "XY");
             }
+        }
+
+        // private network lookup
+        private static bool IsLocalNework(IPAddress iPAddress)
+        {
+            // so what we look here?
+            // we are looking if this is an ipv6 that is imposssible to be public ip. 
+            // there is no point to check the database
+            if (iPAddress.AddressFamily == AddressFamily.InterNetworkV6)
+            {
+                bool isPrivate = iPAddress.IsIPv6LinkLocal || iPAddress.IsIPv6SiteLocal || IsIPv6UniqueLocal(iPAddress);
+                return isPrivate;
+            }
+            // local network ipv4 cases, at this point its not ipv6
+            var bytes = iPAddress.GetAddressBytes();
+            bool isLocalNetwork = bytes[0] == 10 // 10.0.0.0/8
+                || bytes[0] == 172 && bytes[1] >= 16 && bytes[1] <= 31 // 172.16.0.0/12
+                || bytes[0] == 192 && bytes[1] == 168 // 192.168.0.0/16
+                || bytes[0] == 169 && bytes[1] == 254 // 169.254.0.0/16 link local
+                || bytes[0] == 100 && bytes[1] >= 64 && bytes[1] <= 127; // 100.64.0.0/10 CGNAT
+            return isLocalNetwork;
+        }
+
+        private static bool IsIPv6UniqueLocal(IPAddress iPAddress)
+        {
+            byte[] bytes = iPAddress.GetAddressBytes();
+            bool isUniqueLocal = bytes[0] == 0xFC || bytes[0] == 0xFD; // Claude helped me on that
+            return isUniqueLocal;
         }
 
         public void Dispose()
